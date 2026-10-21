@@ -63,7 +63,7 @@ The script `SQLQuery1.sql` creates a database called `StillroomDB` with these ta
 
 1. Clone the repository:
    ```
-   git clone https://github.com/YOUR-USERNAME/YOUR-REPO.git
+   git clone https://github.com/RipfumeloRikhotso-11/stillroom.git
    ```
 2. Open `SQLQuery1.sql` in Visual Studio or SQL Server Management Studio, connect to `(localdb)\MSSQLLocalDB`, and run it to create `StillroomDB`.
 3. Open `Stillroom_Backend/Stillroom_Backend.slnx` and run the project to start the WCF service. Visual Studio restores the NuGet packages automatically.
