@@ -1,0 +1,25 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build output
+bin/
+obj/
+[Dd]ebug/
+[Rr]elease/
+
+# NuGet packages (restored automatically by Visual Studio)
+packages/
+*.nupkg
+
+# Logs & temp
+*.log
+*.tmp
+~$*
+
+# OS files
+.DS_Store
+Thumbs.db

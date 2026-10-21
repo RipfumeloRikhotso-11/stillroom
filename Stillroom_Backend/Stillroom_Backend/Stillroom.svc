@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Stillroom_Backend.Service1" CodeBehind="Stillroom.svc.cs" %>

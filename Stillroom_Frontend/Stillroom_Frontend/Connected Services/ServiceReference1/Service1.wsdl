@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:51878/Stillroom.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:51878/Stillroom.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:51878/Stillroom.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Stillroom_Backend" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IStillroom_Register_InputMessage">
+    <wsdl:part name="parameters" element="tns:Register" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_Register_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_Login_InputMessage">
+    <wsdl:part name="parameters" element="tns:Login" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_Login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LoginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_StartSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:StartSession" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_StartSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:StartSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_CompleteSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteSession" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_CompleteSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetSessionHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionHistory" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetSessionHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetTotalStudyMinutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalStudyMinutes" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetTotalStudyMinutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalStudyMinutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_AddTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddTask" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_AddTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetSessionTasks_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionTasks" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetSessionTasks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSessionTasksResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_CompleteTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteTask" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_CompleteTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CompleteTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_DeleteTask_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTask" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_DeleteTask_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettings" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_GetSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_UpdateSettings_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSettings" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_UpdateSettings_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSettingsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_SendContactMessage_InputMessage">
+    <wsdl:part name="parameters" element="tns:SendContactMessage" />
+  </wsdl:message>
+  <wsdl:message name="IStillroom_SendContactMessage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SendContactMessageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IStillroom">
+    <wsdl:operation name="Register">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/Register" message="tns:IStillroom_Register_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/RegisterResponse" message="tns:IStillroom_Register_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/Login" message="tns:IStillroom_Login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/LoginResponse" message="tns:IStillroom_Login_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="StartSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/StartSession" message="tns:IStillroom_StartSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/StartSessionResponse" message="tns:IStillroom_StartSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/CompleteSession" message="tns:IStillroom_CompleteSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/CompleteSessionResponse" message="tns:IStillroom_CompleteSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/GetSessionHistory" message="tns:IStillroom_GetSessionHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/GetSessionHistoryResponse" message="tns:IStillroom_GetSessionHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalStudyMinutes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/GetTotalStudyMinutes" message="tns:IStillroom_GetTotalStudyMinutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/GetTotalStudyMinutesResponse" message="tns:IStillroom_GetTotalStudyMinutes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/AddTask" message="tns:IStillroom_AddTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/AddTaskResponse" message="tns:IStillroom_AddTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionTasks">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/GetSessionTasks" message="tns:IStillroom_GetSessionTasks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/GetSessionTasksResponse" message="tns:IStillroom_GetSessionTasks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CompleteTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/CompleteTask" message="tns:IStillroom_CompleteTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/CompleteTaskResponse" message="tns:IStillroom_CompleteTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/DeleteTask" message="tns:IStillroom_DeleteTask_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/DeleteTaskResponse" message="tns:IStillroom_DeleteTask_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/GetSettings" message="tns:IStillroom_GetSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/GetSettingsResponse" message="tns:IStillroom_GetSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettings">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/UpdateSettings" message="tns:IStillroom_UpdateSettings_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/UpdateSettingsResponse" message="tns:IStillroom_UpdateSettings_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SendContactMessage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStillroom/SendContactMessage" message="tns:IStillroom_SendContactMessage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStillroom/SendContactMessageResponse" message="tns:IStillroom_SendContactMessage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStillroom" type="tns:IStillroom">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Register">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/Register" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Login">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/Login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartSession">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/StartSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteSession">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/CompleteSession" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionHistory">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/GetSessionHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalStudyMinutes">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/GetTotalStudyMinutes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTask">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/AddTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSessionTasks">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/GetSessionTasks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CompleteTask">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/CompleteTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTask">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/DeleteTask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSettings">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/GetSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSettings">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/UpdateSettings" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendContactMessage">
+      <soap:operation soapAction="http://tempuri.org/IStillroom/SendContactMessage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IStillroom" binding="tns:BasicHttpBinding_IStillroom">
+      <soap:address location="http://localhost:51878/Stillroom.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

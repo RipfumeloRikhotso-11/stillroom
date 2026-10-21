@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Stillroom_Backend" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Stillroom_Backend" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="LoginResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Success" type="xs:boolean" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LoginResult" nillable="true" type="tns:LoginResult" />
+  <xs:complexType name="ArrayOfFocusSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="FocusSession" nillable="true" type="tns:FocusSession" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfFocusSession" nillable="true" type="tns:ArrayOfFocusSession" />
+  <xs:complexType name="FocusSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CompletedAt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DurationMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="SessionGoal" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      <xs:element minOccurs="0" name="StartedAt" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FocusSession" nillable="true" type="tns:FocusSession" />
+  <xs:complexType name="ArrayOfStudyTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StudyTask" nillable="true" type="tns:StudyTask" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStudyTask" nillable="true" type="tns:ArrayOfStudyTask" />
+  <xs:complexType name="StudyTask">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsComplete" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SessionID" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TaskID" type="xs:int" />
+      <xs:element minOccurs="0" name="TaskPosition" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StudyTask" nillable="true" type="tns:StudyTask" />
+  <xs:complexType name="AppSettings">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmbientSound" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TimerMinutes" type="xs:int" />
+      <xs:element minOccurs="0" name="Volume" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AppSettings" nillable="true" type="tns:AppSettings" />
+</xs:schema>

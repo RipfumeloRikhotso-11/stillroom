@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Stillroom">
+  <DataContextMoniker Name="/StillroomDataContext" />
+  <nestedChildShapes>
+    <classShape Id="6e726792-a310-4bec-8381-ec4948efd451" absoluteBounds="5.125, 3.125, 2, 1.9631982421875">
+      <DataClassMoniker Name="/StillroomDataContext/USER" />
+      <nestedChildShapes>
+        <elementListCompartment Id="470859dd-f944-491c-918a-c0294365cf90" absoluteBounds="5.14, 3.585, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee3482f7-0740-4e6a-9946-985c3b415258" absoluteBounds="2.25, 3.125, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/StillroomDataContext/SESSION_TASK" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da527903-886e-4262-9b35-d7c78b88a158" absoluteBounds="2.265, 3.585, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="fb71b0fc-3a16-481f-a932-7f360f941f07" absoluteBounds="5.25, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/StillroomDataContext/FOCUS_SESSION" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1b193d90-0995-4bbb-88ea-206fc431a3ca" absoluteBounds="5.2650000000000006, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 1.48159912109375); (3.40625 : 1.48159912109375); (3.40625 : 3.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StillroomDataContext/FOCUS_SESSION/FOCUS_SESSION_SESSION_TASK" />
+      <nodes>
+        <classShapeMoniker Id="fb71b0fc-3a16-481f-a932-7f360f941f07" />
+        <classShapeMoniker Id="ee3482f7-0740-4e6a-9946-985c3b415258" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.1875 : 3.125); (6.1875 : 2.4631982421875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StillroomDataContext/USER/USER_FOCUS_SESSION" />
+      <nodes>
+        <classShapeMoniker Id="6e726792-a310-4bec-8381-ec4948efd451" />
+        <classShapeMoniker Id="fb71b0fc-3a16-481f-a932-7f360f941f07" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="79a4d0e5-81db-4bd3-ba03-d38eb253c225" absoluteBounds="8.25, 3.25, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/StillroomDataContext/APP_SETTING" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8c75f677-2ad8-497d-8191-6af667efb5e7" absoluteBounds="8.265, 3.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7.125 : 4.13544840494792); (8.25 : 4.13544840494792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/StillroomDataContext/USER/USER_APP_SETTING" />
+      <nodes>
+        <classShapeMoniker Id="6e726792-a310-4bec-8381-ec4948efd451" />
+        <classShapeMoniker Id="79a4d0e5-81db-4bd3-ba03-d38eb253c225" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4812c01d-1118-4be1-8b14-1f0e445779fe" absoluteBounds="0.5, 5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/StillroomDataContext/ContactMessage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a73523df-ed12-48f3-b86f-c9353ae96a33" absoluteBounds="0.51500000000000012, 5.46, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
